@@ -129,6 +129,25 @@ header button{
     overflow: hidden;
 }
 
+/* Menu Section */
+
+.menu-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5em;
+}
+
+.menu{
+    font-size: 14px;
+
+}
+
+.menu-group-heading{
+    margin: 0;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #ccc;
+}
+
 
 
 /* Footer Section */
