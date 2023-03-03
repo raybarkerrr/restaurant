@@ -24,8 +24,8 @@ header a {
 }
 
 header {
-  padding: 0 20px;
-  background-color: rgba(12, 181, 239, 1);
+  padding: 20px;
+  background-color: #feffdf;
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -70,15 +70,15 @@ ul li:hover {
 }
 
 #about a {
-  color: white;
+  color: black;
 }
 
 #home a {
-  color: white;
+  color: black;
 }
 
 #contact a {
-  color: white;
+  color: black;
 }
 
 .menuToggle {
@@ -94,7 +94,7 @@ ul li:hover {
 #hamburger-icon div {
   width: 35px;
   height: 3px;
-  background-color: white;
+  background-color: black;
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -113,7 +113,20 @@ ul li:hover {
 }
 
 .fa-bars{
-  color: white;
+  color: black;
+}
+
+header button{
+    width: 23%;
+    height: 40px;
+    border: 1;
+    font-weight: bold;
+    border-color: black;
+    background-color: #f8da5b;
+    cursor: pointer;
+    color: black;
+    border-radius: 30px;
+    overflow: hidden;
 }
 
 
@@ -155,7 +168,6 @@ ul li:hover {
         display:block;
         visibility: visible;
         opacity: 1;
-        position: absolute;
         top: 1em;
         right: 1em;
     }
@@ -171,7 +183,7 @@ ul li:hover {
         left: 0;
         height: 60vh;
         width: 100%;
-        background-color: rgba(12, 181, 239, 1);
+        background-color: #feffdf;
         display:block;
       }
 
