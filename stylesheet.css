@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a{
+  all: unset;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* Header Section */
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  padding: 0 20px;
+  background-color: rgba(12, 181, 239, 1);
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
+
+.logo img{
+    width: 75px;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+ul a {
+  color: white;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+#home,
+#about,
+#contact {
+  border-radius: 5px;
+  padding: 5px 8px;
+  padding-left: 1.8em;
+}
+
+.mobile-menu li{
+  border-radius: 5px;
+  padding: 5px 8px;
+  padding-left: 1.8em;
+}
+
+#about a {
+  color: white;
+}
+
+#home a {
+  color: white;
+}
+
+#contact a {
+  color: white;
+}
+
+.menuToggle {
+  margin: auto 0;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1.6em;
+  display:none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+ .mobile-menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  padding-right: 3rem;
+  cursor: pointer;
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+.fa-bars{
+  color: white;
+}
+
+
+
+/* Footer Section */
+
+.footer-section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #0092ca;
+    padding-top: 2rem;
+}
+
+.footer h1{
+    font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: lighter;
+    color: #e0e0e0;
+    letter-spacing: .1rem;
+}
+    
+.footer p{
+    padding-top: .5rem;
+    font-size: .7rem;
+    color: white;
+    font-weight: bold;
+    padding: 2% 7% 2% 7%;
+}
+    
+.fa-brands{
+    color: white;
+    font-size: 2em;
+}
+
+
+@media screen and (max-width:600px){
+    .menuToggle{
+        display:block;
+        visibility: visible;
+        opacity: 1;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+    }
+
+    .mobile-menu{
+        display:none;
+    }
+    
+    .mobileMenu.open .mobile-menu {
+        position: absolute;
+        top: 70px;
+        z-index:1;
+        left: 0;
+        height: 60vh;
+        width: 100%;
+        background-color: rgba(12, 181, 239, 1);
+        display:block;
+      }
+
+  }
