@@ -132,7 +132,7 @@ header button{
 /* Menu Section */
 
 .container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 1.5em;
     background-color: #feffdf;
@@ -179,11 +179,15 @@ header button{
   }
   
   .menu-item-name {
-    margin-right: 1.5em;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
   }
   
   .menu-item-description {
-    line-height: 1.6;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-family: 'Lato', sans-serif;
   }
 
 
@@ -229,8 +233,8 @@ header button{
     }
   
     .menu-item-image {
-      width: 125px;
-      height: 125px;
+      width: 350px;
+      height: 350px;
     }
   }
   
