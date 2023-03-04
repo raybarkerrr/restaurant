@@ -25,7 +25,7 @@ header a {
 
 header {
   padding: 20px;
-  background-color: #feffdf;
+  background-color: #fff8e8;
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -129,13 +129,27 @@ header button{
     overflow: hidden;
 }
 
+/* Banner Section */
+
+.banner-left img{
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.banner-left{
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #feffdf;
+}
+
 /* Menu Section */
 
 .container {
     max-width: 1500px;
     margin: 0 auto;
     padding: 1.5em;
-    background-color: #feffdf;
+    background-color: #fff8e8;
   }
   
   .menu {
@@ -161,11 +175,9 @@ header button{
   }
   
   .menu-item-image {
-    width: 290px;
-    height: 290px;
+    width: 100%;
     flex-shrink: 0;
     object-fit: cover;
-    margin-right: 1.5em;
   }
   
   .menu-item-text {
@@ -240,6 +252,28 @@ header button{
     header button{
         width: 6%;
     }
+
+    /* Banner Section */
+
+.banner-left img{
+    width: 460px;
+    height: 460px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.banner-left{
+    display: flex;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.banner-left h2{
+    padding: 7%;
+
+}
+
+
   }
   
 
