@@ -229,12 +229,16 @@ header button{
     }
   
     .menu-group {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   
     .menu-item-image {
       width: 350px;
       height: 350px;
+    }
+
+    header button{
+        width: 6%;
     }
   }
   
