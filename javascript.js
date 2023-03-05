@@ -9,11 +9,11 @@ fetch ("https://free-food-menus-api-production.up.railway.app/steaks")
     return response.json();
 })
 .then(data => {
-    data.forEach(user => {
-        const markup = `<span>${user.name}</span>`;
-
-        document.querySelector(`span`) .insertAdjacentHTML("beforeend", markup )
-    });
+    const firstRecord = data.shift();
+    console.log(firstRecord);
+    const markup = `<span>${data[2].name}</span>`;
+    document.querySelector(`span`).insertAdjacentHTML("beforeend", markup )
 })
 
 .catch(error => console.log(error));
+
