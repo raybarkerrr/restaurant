@@ -26,7 +26,7 @@ header a {
 header {
   padding: 20px;
   background-color: #fff8e8;
-  height: 70px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -34,7 +34,8 @@ header {
 }
 
 .logo img{
-    width: 75px;
+    width: 100px;
+    height: auto;
 }
 
 ul {
@@ -122,7 +123,7 @@ header button{
     border: 1;
     font-weight: bold;
     border-color: black;
-    background-color: #f8da5b;
+    background-color: pink;
     cursor: pointer;
     color: black;
     border-radius: 30px;
@@ -140,7 +141,7 @@ header button{
 .banner-left{
     font-weight: 700;
     font-size: 20px;
-    background-color: #ffd6a4;
+    background-color: pink;
     height: 70vh;
 }
 
