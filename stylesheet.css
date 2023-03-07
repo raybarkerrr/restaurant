@@ -322,4 +322,18 @@ header button{
         display:block;
       }
 
+      header button{
+        width: 23%;
+        height: 40px;
+        margin-top: .8em;
+        border: 1;
+        font-weight: bold;
+        border-color: black;
+        background-color: pink;
+        cursor: pointer;
+        color: black;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
   }
