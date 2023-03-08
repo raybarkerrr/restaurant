@@ -8,15 +8,15 @@ menuToggle.onclick = function() {
 
 function initMap() {
    
-   const yosemite = { lat: 37.88407138217377, lng: -119.51635674423457 };
+   const pensacola = { lat: 30.4328214, lng: -87.2503974 };
    
    const map = new google.maps.Map(document.getElementById("map"), {
      zoom: 4,
-     center: yosemite,
+     center: pensacola,
    });
    
    const marker = new google.maps.Marker({
-     position: yosemite,
+     position: pensacola,
      map: map,
    });
  }
@@ -29,7 +29,7 @@ const express = require('express');
 const app = express();
 app.use(express.static('public'));
 
-const YOUR_DOMAIN = 'http://127.0.0.1:5500/';
+const YOUR_DOMAIN = 'http://127.0.0.1:5500';
 
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
