@@ -23,28 +23,22 @@ function initMap() {
  
  window.initMap = initMap;
 
-
-const stripe = require('stripe')('sk_test_51MinZZKkGpyFNMs8UqRPdZ9H3TDMUJzxcf6ExJeBG0BicLZwzluiaA0yf5mep2zEyCjTcwTq0hPJxsZCSmAPoZYY004oxg2qiA');
-const express = require('express');
-const app = express();
-app.use(express.static('public'));
-
-const YOUR_DOMAIN = 'http://127.0.0.1:5500';
-
-app.post('/create-checkout-session', async (req, res) => {
-  const session = await stripe.checkout.sessions.create({
-    line_items: [
-      {
-        price: 'price_1MincuKkGpyFNMs8Is0Q4JIF',
-        quantity: 1,
-      },
-    ],
-    mode: 'payment',
-    success_url: `${YOUR_DOMAIN}/success.html`,
-    cancel_url: `${YOUR_DOMAIN}/cancel.html`,
-  });
-
-  res.redirect(303, session.url);
-});
-
-app.listen(4242, () => console.log('Running on port 4242'));
+ let slideIndex = 0;
+ showSlides();
+ 
+ function showSlides() {
+   let i;
+   let slides = document.getElementsByClassName("mySlides");
+   let dots = document.getElementsByClassName("dot");
+   for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+   }
+   slideIndex++;
+   if (slideIndex > slides.length) {slideIndex = 1}    
+   for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" active", "");
+   }
+   slides[slideIndex-1].style.display = "block";  
+   dots[slideIndex-1].className += " active";
+   setTimeout(showSlides, 2000); // Change image every 2 seconds
+ }
