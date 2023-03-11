@@ -1,12 +1,13 @@
-let mobileMenu = document.querySelector('.mobileMenu');
+// Hamburger Menu
+let mobileMenu = document.querySelector('.mobileMenu'); 
 let menuToggle = document.querySelector('.menuToggle');
 
 menuToggle.onclick = function() {
    mobileMenu.classList.toggle('open');
 }
 
-
-function initMap() {
+// Google Maps 
+function initMap() { 
    
    const pensacola = { lat: 30.4328214, lng: -87.2503974 };
    
@@ -20,10 +21,10 @@ function initMap() {
      map: map,
    });
  }
- 
  window.initMap = initMap;
 
- let i = 0;
+ // Carousel
+ let i = 0; 
  let images = [];
  var time = 5000;
 
@@ -44,3 +45,27 @@ function initMap() {
  }
 
  window.onload=changeImage;
+
+ // API Restaurant Data
+ fetch("https://www.themealdb.com/api/json/v1/1/search.php?s")
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error("NETWORK RESPONSE ERROR");
+    }
+  })
+  .then(data => {
+    console.log(data);
+    displayFood(data)
+  })
+  .catch((error) => console.error("FETCH ERROR:", error));
+
+ function displayFood(data) {
+  const food = data.meals[1];
+  const foodDiv = document.getElementById("food");
+  const foodName = food.strMeal;
+  const heading = document.createElement("h3");
+  heading.innerHTML = foodName;
+  foodDiv.appendChild(heading);
+}
