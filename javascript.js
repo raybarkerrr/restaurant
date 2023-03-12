@@ -62,10 +62,15 @@ function initMap() {
   .catch((error) => console.error("FETCH ERROR:", error));
 
  function displayFood(data) {
-  const food = data.meals[1];
+  const food = data.meals[11];
   const foodDiv = document.getElementById("food");
   const foodName = food.strMeal;
   const heading = document.createElement("h3");
   heading.innerHTML = foodName;
   foodDiv.appendChild(heading);
+
+  const foodImage = document.createElement("img");
+  foodImage.src = food.MealThumb;
+  foodDiv.appendChild(foodImage);
+  document.body.style.backgroundImage = "url('" + food.MealThumb + "')";
 }
