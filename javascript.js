@@ -70,7 +70,7 @@ function initMap() {
   foodDiv.appendChild(heading);
 
   const foodImage = document.createElement("img");
-  foodImage.src = food.MealThumb;
+  foodImage.src = food.strMealThumb;
   foodDiv.appendChild(foodImage);
-  document.body.style.backgroundImage = "url('" + food.MealThumb + "')";
+  document.body.style.backgroundImage = "url('" + food.strMealThumb + "')";
 }
