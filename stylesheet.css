@@ -204,6 +204,10 @@ header button{
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
   }
+
+  .menu-item-name img{
+    width: 100%;
+  }
   
   .menu-item-description {
     margin-top: 1rem;
