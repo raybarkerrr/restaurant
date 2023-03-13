@@ -69,6 +69,8 @@ function initMap() {
   heading.innerHTML = foodName;
   foodDiv.appendChild(heading);
 
+  console.log(food)
+
   const foodImage = document.createElement("img");
   foodImage.src = food.strMealThumb;
   foodDiv.appendChild(foodImage);
