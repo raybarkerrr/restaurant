@@ -26,11 +26,11 @@ function initMap() {
  // Carousel
  let i = 0; 
  let images = [];
- var time = 5000;
+ var time = 3000;
 
- images [0] = "Photos/smoothie1.jpeg"
- images [1] = "Photos/smoothie2.jpeg"
- images [2] = "Photos/smoothie1.jpeg"
+ images [0] = "Photos/food3.jpeg"
+ images [1] = "Photos/food4.jpeg"
+ images [2] = "Photos/food5.jpg"
 
  function changeImage(){
   document.pic.src = images[i]
@@ -62,7 +62,7 @@ function initMap() {
   .catch((error) => console.error("FETCH ERROR:", error));
 
  function displayFood(data) {
-  
+
   for (i = 0; i < data.meals.length; i++){
     food = data.meals[i];
     foodDiv = document.getElementById("food");
@@ -75,5 +75,7 @@ function initMap() {
     foodImage.src = food.strMealThumb;
     foodDiv.appendChild(foodImage);
     document.body.style.backgroundImage = "url('" + food.strMealThumb + "')";
+
+    
   }
 }
