@@ -157,6 +157,47 @@ header button{
     font-family: 'Lato', sans-serif;
 }
 
+.banner-right h2{
+  padding-bottom: 10px;
+}
+
+/* What We Do Section */
+
+.what-we-do-mini{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 4% 6% 4% 6%;
+ }
+
+ .what-we-do-content{
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+ }
+
+ .what-we-do-content h3{
+  font-size: 1.2em;
+  font-weight: 900;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+ .what-we-do-content p{
+  font-size: 1.2em;
+  line-height: 1.7em;
+  color: #646464;
+}
+
+.fa-mobile-screen-button{
+  color: black;
+  font-size: 3.5rem;
+}
+
+.what-we-do-content img{
+  width: 20%;
+}
+
 /* Menu Section */
 
 .container {
@@ -301,12 +342,12 @@ header button{
 }
 
 .banner-right h2{
-    padding: 10% 0% 2% 0%;
-    font-size: 60px;
+  padding: 10% 0% 2% 0%;
+  font-size: 60px;
 }
 
 .banner-right{
-    padding: 2% 7% 2% 7%;
+  padding: 2% 7% 2% 7%;
 
 }
 
