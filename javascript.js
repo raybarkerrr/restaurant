@@ -76,6 +76,42 @@ function initMap() {
     foodDiv.appendChild(foodImage);
     document.body.style.backgroundImage = "url('" + food.strMealThumb + "')";
 
-    
+    let description = document.createElement("p");
+    description.innerText = myDescriptions[data.meals[i].idMeal];
+    foodDiv.appendChild(description);
   }
+}
+
+const myDescriptions = {
+  "52977": "Red lentil soup with a tomato base.",
+  "53060": "A pastry made of a thin flaky dough, filled with meat and cheese.",
+  "53065": "Made with rice, seaweed, salmon, fish eggs.",
+  "52978": "",
+  "53026": "",
+  "52785": "",
+  "52804": "",
+  "52844": "",
+  "52929": "",
+  "52948": "",
+  "52971": "",
+  "53013": "",
+  "53027": "",
+  "52769": "",
+  "52802": "",
+  "54854": "",
+  "52887": "",
+  "52906": "",
+  "52980": "",
+  "53006": "",
+  "53028": "",
+  "52791": "",
+  "52811": "",
+  "52871": "",
+  "52926": "",
+}
+
+for (e = 0; e < myDescriptions.length; e++) {
+  let description = document.createElement("p");
+  description.innerText = myDescriptions[data.meals[e].idMeal];
+  foodDiv.appendChild(description);
 }
