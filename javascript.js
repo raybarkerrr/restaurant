@@ -6,6 +6,15 @@ menuToggle.onclick = function() {
    mobileMenu.classList.toggle('open');
 }
 
+// Cart Menu
+let cartMenu = document.querySelector('.cartMenu'); 
+let cartToggle = document.querySelector('.cartToggle');
+
+cartToggle.onclick = function() {
+   cartMenu.classList.toggle('open');
+}
+
+
 // Google Maps 
 function initMap() { 
    
