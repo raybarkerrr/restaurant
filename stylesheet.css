@@ -132,7 +132,6 @@ header button{
 }
 
 .fa-cart-shopping {
-  
   padding-top: 20px;
 }
 
@@ -482,8 +481,8 @@ padding-bottom: 15px;
   
   .cartMenu.open .cart-menu {
       position: absolute;
-      top: 70px;
-      z-index:1;
+      text-align: center;
+      top: 100px;
       left: 0;
       height: 60vh;
       width: 100%;
