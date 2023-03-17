@@ -152,6 +152,10 @@ function initMap() {
     let foodDescription = document.createElement("p");
     foodDescription.innerText = myDescriptions[data.meals[i].idMeal];
     foodDiv.appendChild(foodDescription);
+
+    let foodButton = document.createElement("button");
+    foodButton.innerText = "Add To Cart";
+    foodDiv.appendChild(foodButton);
   }
 }
 
