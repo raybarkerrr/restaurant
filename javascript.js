@@ -142,7 +142,7 @@ function initMap() {
   }
 }
 
-  fetch("www.thecocktaildb.com/api/json/v1/1/search.php?")
+  fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=")
   .then((response) => {
     if (response.ok) {
       return response.json();
@@ -152,7 +152,7 @@ function initMap() {
   })
   .then(data => {
     console.log(data);
-    displayFood(data)
+    displayDrinks(data)
   })
   .catch((error) => console.error("FETCH ERROR:", error));
 
