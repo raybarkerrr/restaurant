@@ -61,6 +61,34 @@ function initMap() {
   })
   .catch((error) => console.error("FETCH ERROR:", error));
 
+  const myDescriptions = {
+    "52977": "Red lentil soup with a tomato base.",
+    "53060": "A pastry made of a thin flaky dough, filled with meat and cheese.",
+    "53065": "Made with rice, seaweed, salmon, fish eggs.",
+    "52978": "Baked potato filled with meat and vegetables.",
+    "53026": "Fried chickpeas and beans served with sauce.",
+    "52785": "Curry made with lentils and vegetables.",
+    "52804": "Fresh cut fries with cheese curds and gravy smothered on top.",
+    "52844": "Filled with hamburger meat and house-made tomato sauce.",
+    "52929": "Doughnut holes tossed in sugar.",
+    "52948": "Dumplings filled with meat and vegetables.",
+    "52971": "Fried mixed vegetables and tomato sauce",
+    "53013": "Traditional American hamburger served with fries.",
+    "53027": "Made with rice, fried onions, macaroni noodles, beans, and tomatoes.",
+    "52769": "Fries smothered with cheese and vegetables.",
+    "52802": "Fresh fish covered with mashed potatoes and our house made sauce.",
+    "52854": "Served with fresh berries and maple syrup.",
+    "52887": "Smoked fish served with rice.",
+    "52906": "Puff pastry tart made with leeks and cream.",
+    "52980": "Kale mashed potatoes, topped with smoky sausages.",
+    "53006": "Roasted potatoes, ground meat, peppers, and tomatoes.",
+    "53028": "Filled with lamb, tomatoes, onions, tzatziki sauce.",
+    "52791": "Fesh strawberries and house-made cream.",
+    "52811": "Cannellini beans, tuscan kale, red pepper flakes, parmesan.",
+    "52871": "Udon noodles served with beef broth, beef, and assorted vegetables.",
+    "52926": "Flaky pastry dough filled with beef and sauce.",
+  }
+
  function displayFood(data) {
 
   for (i = 0; i < data.meals.length; i++){
@@ -82,36 +110,4 @@ function initMap() {
   }
 }
 
-const myDescriptions = {
-  "52977": "Red lentil soup with a tomato base.",
-  "53060": "A pastry made of a thin flaky dough, filled with meat and cheese.",
-  "53065": "Made with rice, seaweed, salmon, fish eggs.",
-  "52978": "Baked potato filled with meat and vegetables.",
-  "53026": "Fried chickpeas and beans served with sauce.",
-  "52785": "Curry made with lentils and vegetables.",
-  "52804": "Fresh cut fries with cheese curds and gravy smothered on top.",
-  "52844": "Filled with hamburger meat and house-made tomato sauce.",
-  "52929": "Doughnut holes tossed in sugar.",
-  "52948": "Dumplings filled with meat and vegetables.",
-  "52971": "Fried mixed vegetables and tomato sauce",
-  "53013": "Traditional American hamburger served with fries.",
-  "53027": "Made with rice, fried onions, macaroni noodles, beans, and tomatoes.",
-  "52769": "Fries smothered with cheese and vegetables.",
-  "52802": "Fresh fish covered with mashed potatoes and our house made sauce.",
-  "52854": "Served with fresh berries and maple syrup.",
-  "52887": "Smoked fish served with rice.",
-  "52906": "Puff pastry tart made with leeks and cream.",
-  "52980": "Kale mashed potatoes, topped with smoky sausages.",
-  "53006": "Roasted potatoes, ground meat, peppers, and tomatoes.",
-  "53028": "Filled with lamb, tomatoes, onions, tzatziki sauce.",
-  "52791": "Fesh strawberries and house-made cream.",
-  "52811": "Cannellini beans, tuscan kale, red pepper flakes, parmesan.",
-  "52871": "Udon noodles served with beef broth, beef, and assorted vegetables.",
-  "52926": "Flaky pastry dough filled with beef and sauce.",
-}
 
-for (e = 0; e < myDescriptions.length; e++) {
-  let description = document.createElement("p");
-  description.innerText = myDescriptions[data.meals[e].idMeal];
-  foodDiv.appendChild(description);
-}
