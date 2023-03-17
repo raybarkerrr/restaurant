@@ -265,6 +265,73 @@ header button{
     font-family: 'Lato', sans-serif;
   }
   
+/* Drinks Section */
+
+.drinks-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1.5em;
+  background-color: #fff8e8;
+}
+
+.drinks-item-name h3{
+padding-bottom: 15px;
+}
+
+.drinks-item-text p{
+padding-bottom: 15px;
+}
+
+.drinks {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.drinks-group-heading {
+  margin: 0;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #ccc;
+}
+
+.drinks-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+
+.drinks-item-image {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.drinks-item-text {
+  flex-grow: 1;
+}
+
+.drinks-item-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.drinks-item-name {
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+
+.drinks-item-name img{
+  width: 100%;
+}
+
+.drinks-item-description {
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-family: 'Lato', sans-serif;
+}
+  
 /* Footer Section */
 
 .footer-section{
