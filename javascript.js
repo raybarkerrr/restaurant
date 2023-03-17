@@ -132,13 +132,15 @@ function initMap() {
     foodDiv.appendChild(foodImage);
     document.body.style.backgroundImage = "url('" + food.strMealThumb + "')";
 
+    let foodPrice = document.createElement("p");
+    foodPrice.innerText = myPrices[data.meals[i].idMeal];
+    foodDiv.appendChild(foodPrice);
+
     let foodDescription = document.createElement("p");
     foodDescription.innerText = myDescriptions[data.meals[i].idMeal];
     foodDiv.appendChild(foodDescription);
 
-    let foodPrice = document.createElement("p");
-    foodPrice.innerText = myPrices[data.meals[i].idMeal];
-    foodDiv.appendChild(foodPrice);
+
   }
 }
 
