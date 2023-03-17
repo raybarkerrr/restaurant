@@ -131,6 +131,11 @@ header button{
     overflow: hidden;
 }
 
+.fa-cart-shopping {
+  
+  padding-top: 20px;
+}
+
 /* Banner Section */
 
 .banner-left img{
