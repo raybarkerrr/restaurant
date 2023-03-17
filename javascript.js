@@ -139,9 +139,20 @@ function initMap() {
     let foodDescription = document.createElement("p");
     foodDescription.innerText = myDescriptions[data.meals[i].idMeal];
     foodDiv.appendChild(foodDescription);
-
-
   }
 }
 
+  fetch("www.thecocktaildb.com/api/json/v1/1/search.php?")
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error("NETWORK RESPONSE ERROR");
+    }
+  })
+  .then(data => {
+    console.log(data);
+    displayFood(data)
+  })
+  .catch((error) => console.error("FETCH ERROR:", error));
 
