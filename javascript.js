@@ -126,6 +126,10 @@ function initMap() {
     "52926": "$8.50",
   }
 
+    const myButton = {
+
+  }
+
  function displayFood(data) {
 
   for (i = 0; i < data.meals.length; i++){
@@ -150,6 +154,8 @@ function initMap() {
     foodDiv.appendChild(foodDescription);
   }
 }
+
+// Drinks API
 
   fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=")
   .then((response) => {
