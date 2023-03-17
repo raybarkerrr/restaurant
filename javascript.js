@@ -156,3 +156,19 @@ function initMap() {
   })
   .catch((error) => console.error("FETCH ERROR:", error));
 
+  function displayDrinks(data) {
+
+    for (i = 0; i < data.drinks.length; i++){
+      drinks = data.drinks[i];
+      drinksDiv = document.getElementById("drinks");
+      drinksName = drinks.strDrink;
+      heading = document.createElement("h3");
+      heading.innerHTML = drinksName;
+      drinksDiv.appendChild(heading); 
+  
+      drinksImage = document.createElement("img");
+      drinksImage.src = drinks.strDrinkThumb;
+      drinksDiv.appendChild(drinksImage);
+      document.body.style.backgroundImage = "url('" + drinks.strMealThumb + "')";
+    }
+  }
