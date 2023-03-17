@@ -126,10 +126,6 @@ function initMap() {
     "52926": "$8.50",
   }
 
-    const myButton = {
-
-  }
-
  function displayFood(data) {
 
   for (i = 0; i < data.meals.length; i++){

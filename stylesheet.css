@@ -209,7 +209,7 @@ header button{
     margin: 0 auto;
     padding: 1.5em;
     background-color: #fff8e8;
-  }
+}
 
 .menu-item-name h3{
   padding-bottom: 15px;
@@ -268,7 +268,21 @@ header button{
     line-height: 1.4;
     font-family: 'Lato', sans-serif;
   }
-  
+
+  .menu-item button{
+    width: 50%;
+    height: 40px;
+    border: 1;
+    font-weight: bold;
+    border-color: black;
+    background-color: #f6c667;
+    cursor: pointer;
+    color: black;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+
 /* Drinks Section */
 
 .drinks-container {
@@ -489,5 +503,7 @@ padding-bottom: 15px;
       background-color: #fff8e8;
       display:block;
     }
+
+    
 
   }
