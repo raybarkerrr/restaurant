@@ -152,8 +152,21 @@ function initMap() {
     let foodButton = document.createElement("button");
     foodButton.innerText = "Add To Cart";
     foodDiv.appendChild(foodButton);
+
+    const shoppingCart = [];
+
+    foodButton.addEventListener("click", function() {
+      let item = {
+        name: foodName,
+
+      };
+      shoppingCart.push(item);
+      console.log(shoppingCart);
+    });
   }
 }
+
+
 
 // Drinks API
 
@@ -187,3 +200,5 @@ function initMap() {
       document.body.style.backgroundImage = "url('" + drinks.strMealThumb + "')";
     }
   }
+
+
