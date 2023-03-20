@@ -70,61 +70,6 @@ function initMap() {
   })
   .catch((error) => console.error("FETCH ERROR:", error));
 
-  const myDescriptions = {
-    "52977": "Red lentil soup with a tomato base.", 
-    "53060": "A pastry made of a thin flaky dough, filled with meat and cheese.",
-    "53065": "Made with rice, seaweed, salmon, fish eggs.",
-    "52978": "Baked potato filled with meat and vegetables.",
-    "53026": "Fried chickpeas and beans served with sauce.",
-    "52785": "Curry made with lentils and vegetables.",
-    "52804": "Fresh cut fries with cheese curds and gravy smothered on top.",
-    "52844": "Filled with hamburger meat and house-made tomato sauce.",
-    "52929": "Doughnut holes tossed in sugar.",
-    "52948": "Dumplings filled with meat and vegetables.",
-    "52971": "Fried mixed vegetables and tomato sauce",
-    "53013": "Traditional American hamburger served with fries.",
-    "53027": "Made with rice, fried onions, macaroni noodles, beans, and tomatoes.",
-    "52769": "Fries smothered with cheese and vegetables.",
-    "52802": "Fresh fish covered with mashed potatoes and our house made sauce.",
-    "52854": "Served with fresh berries and maple syrup.",
-    "52887": "Smoked fish served with rice.",
-    "52906": "Puff pastry tart made with leeks and cream.",
-    "52980": "Kale mashed potatoes, topped with smoky sausages.",
-    "53006": "Roasted potatoes, ground meat, peppers, and tomatoes.",
-    "53028": "Filled with lamb, tomatoes, onions, tzatziki sauce.",
-    "52791": "Fesh strawberries and house-made cream.",
-    "52811": "Cannellini beans, tuscan kale, red pepper flakes, parmesan.",
-    "52871": "Udon noodles served with beef broth, beef, and assorted vegetables.",
-    "52926": "Flaky pastry dough filled with beef and sauce.",
-  }
-
-  const myPrices = {
-    "52977": "$7.50", 
-    "53060": "$8.59",
-    "53065": "$11.99",
-    "52978": "$6.50",
-    "53026": "$4.99",
-    "52785": "$6.50",
-    "52804": "$4.99",
-    "52844": "$7.50",
-    "52929": "$3.99",
-    "52948": "$4.50",
-    "52971": "$7.50",
-    "53013": "$9.99",
-    "53027": "$7.50",
-    "52769": "$4.99",
-    "52802": "$9.99",
-    "52854": "$6.99",
-    "52887": "$8.50",
-    "52906": "$4.50",
-    "52980": "$8.99",
-    "53006": "$9.99",
-    "53028": "$7.50",
-    "52791": "$3.99",
-    "52811": "$6.50",
-    "52871": "$7.50",
-    "52926": "$8.50",
-  }
 
  function displayFood(data) {
 
@@ -152,53 +97,162 @@ function initMap() {
     let foodButton = document.createElement("button");
     foodButton.innerText = "Add To Cart";
     foodDiv.appendChild(foodButton);
+  
 
-    const shoppingCart = [];
-
-    foodButton.addEventListener("click", function() {
-      let item = {
-        name: foodName,
-
-      };
-      shoppingCart.push(item);
-      console.log(shoppingCart);
-    });
   }
 }
 
-
-
-// Drinks API
-
-  fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=")
-  .then((response) => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      throw new Error("NETWORK RESPONSE ERROR");
-    }
-  })
-  .then(data => {
-    console.log(data);
-    displayDrinks(data)
-  })
-  .catch((error) => console.error("FETCH ERROR:", error));
-
-  function displayDrinks(data) {
-
-    for (i = 0; i < data.drinks.length; i++){
-      drinks = data.drinks[i];
-      drinksDiv = document.getElementById("drinks");
-      drinksName = drinks.strDrink;
-      heading = document.createElement("h3");
-      heading.innerHTML = drinksName;
-      drinksDiv.appendChild(heading); 
+const meals = {
+  id: 52977,
+  image: "",
+  name: foodName,
+  price: "$7.50",
+  description: "Red lentil soup with a tomato base.",
   
-      drinksImage = document.createElement("img");
-      drinksImage.src = drinks.strDrinkThumb;
-      drinksDiv.appendChild(drinksImage);
-      document.body.style.backgroundImage = "url('" + drinks.strMealThumb + "')";
-    }
-  }
+  id: 53060,
+  image: "",
+  name: "",
+  price: "$8.59",
+  description: "A pastry made of a thin flaky dough, filled with meat and cheese.",
+  
+  id: 53065,
+  image: "",
+  name: "",
+  price: "$11.99",
+  description: "Made with rice, seaweed, salmon, fish eggs.",
 
+  id: 52978,
+  image: "",
+  name: "",
+  price: "$6.50",
+  description: "Baked potato filled with meat and vegetables.",
 
+  id: 53026,
+  image: "",
+  name: "",
+  price: "$4.99",
+  description: "Fried chickpeas and beans served with sauce.",
+
+  id: 52785,
+  image: "",
+  name: "",
+  price: "$6.50",
+  description: "Curry made with lentils and vegetables.",
+
+  id: 52804,
+  image: "",
+  name: "",
+  price: "$4.99",
+  description: "Fresh cut fries with cheese curds and gravy smothered on top.",
+
+  id: 52844,
+  image: "",
+  name: "",
+  price: "$6.50",
+  description: "Filled with hamburger meat and house-made tomato sauce.",
+
+  id: 52929,
+  image: "",
+  name: "",
+  price: "$4.99",
+  description: "Doughnut holes tossed in sugar.",
+
+  id: 52948,
+  image: "",
+  name: "",
+  price: "$7.50",
+  description: "Dumplings filled with meat and vegetables.",
+
+  id: 52971,
+  image: "",
+  name: "",
+  price: "$3.99",
+  description: "Fried mixed vegetables and tomato sauce",
+
+  id: 53013,
+  image: "",
+  name: "",
+  price: "$4.50",
+  description: "Traditional American hamburger served with fries.",
+
+  id: 53027,
+  image: "",
+  name: "",
+  price: "$7.50",
+  description: "Made with rice, fried onions, macaroni noodles, beans, and tomatoes.",
+
+  id: 52769,
+  image: "",
+  name: "",
+  price: "$9.99",
+  description: "Fries smothered with cheese and vegetables.",
+
+  id: 52802,
+  image: "",
+  name: "",
+  price: "$7.50",
+  description: "Fresh fish covered with mashed potatoes and our house made sauce.",
+
+  id: 52854,
+  image: "",
+  name: "",
+  price: "$4.99",
+  description: "Served with fresh berries and maple syrup.",
+
+  id: 52887,
+  image: "",
+  name: "",
+  price: "$9.99",
+  description: "Smoked fish served with rice.",
+
+  id: 52906,
+  image: "",
+  name: "",
+  price: "$6.99",
+  description: "Puff pastry tart made with leeks and cream.",
+
+  id: 52980,
+  image: "",
+  name: "",
+  price: "$8.50",
+  description: "Kale mashed potatoes, topped with smoky sausages.",
+
+  id: 53006,
+  image: "",
+  name: "",
+  price: "$4.50",
+  description: "Roasted potatoes, ground meat, peppers, and tomatoes.",
+
+  id: 53028,
+  image: "",
+  name: "",
+  price: "$8.99",
+  description: "Filled with lamb, tomatoes, onions, tzatziki sauce.",
+
+  id: 52791,
+  image: "",
+  name: "",
+  price: "$9.99",
+  description: "Fresh strawberries and house-made cream.",
+
+  id: 52811,
+  image: "",
+  name: "",
+  price: "$7.50",
+  description: "Cannellini beans, tuscan kale, red pepper flakes, parmesan.",
+
+  id: 52871,
+  image: "",
+  name: "",
+  price: "$6.99",
+  description: "Udon noodles served with beef broth, beef, and assorted vegetables.",
+
+  id: 52926,
+  image: "",
+  name: "",
+  price: "$7.50",
+  description: "Flaky pastry dough filled with beef and sauce.",
+  
+  
+
+}
