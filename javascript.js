@@ -71,9 +71,8 @@ function initMap() {
   .catch((error) => console.error("FETCH ERROR:", error));
 
 
- function displayFood(data) {
 
-  for (i = 0; i < data.meals.length; i++){
+  /* for (i = 0; i < data.meals.length; i++){
     food = data.meals[i];
     foodDiv = document.getElementById("food");
     foodName = food.strMeal;
@@ -98,161 +97,216 @@ function initMap() {
     foodButton.innerText = "Add To Cart";
     foodDiv.appendChild(foodButton);
   
+*/
 
-  }
+const displayFood =(id) => {
+
 }
 
-const meals = {
+const meals = [
+  {
   id: 52977,
   image: "",
   name: foodName,
   price: "$7.50",
   description: "Red lentil soup with a tomato base.",
+  },
   
+  {
   id: 53060,
   image: "",
   name: "",
   price: "$8.59",
   description: "A pastry made of a thin flaky dough, filled with meat and cheese.",
+  },
   
+  {
   id: 53065,
   image: "",
   name: "",
   price: "$11.99",
   description: "Made with rice, seaweed, salmon, fish eggs.",
-
+  },
+  
+  {
   id: 52978,
   image: "",
   name: "",
   price: "$6.50",
   description: "Baked potato filled with meat and vegetables.",
-
+  },
+  
+  {
   id: 53026,
   image: "",
   name: "",
   price: "$4.99",
   description: "Fried chickpeas and beans served with sauce.",
-
+  },
+  
+  {
   id: 52785,
   image: "",
   name: "",
   price: "$6.50",
   description: "Curry made with lentils and vegetables.",
-
+  },
+  
+  {
   id: 52804,
   image: "",
   name: "",
   price: "$4.99",
   description: "Fresh cut fries with cheese curds and gravy smothered on top.",
-
+  },
+  
+  {
   id: 52844,
   image: "",
   name: "",
   price: "$6.50",
   description: "Filled with hamburger meat and house-made tomato sauce.",
-
+  },
+  
+  {
   id: 52929,
   image: "",
   name: "",
   price: "$4.99",
   description: "Doughnut holes tossed in sugar.",
-
+  },
+  
+  {
   id: 52948,
   image: "",
   name: "",
   price: "$7.50",
   description: "Dumplings filled with meat and vegetables.",
-
+  },
+  
+  {
   id: 52971,
   image: "",
   name: "",
   price: "$3.99",
   description: "Fried mixed vegetables and tomato sauce",
-
+  },
+  
+  {
   id: 53013,
   image: "",
   name: "",
   price: "$4.50",
   description: "Traditional American hamburger served with fries.",
-
+  },
+  
+  {
   id: 53027,
   image: "",
   name: "",
   price: "$7.50",
   description: "Made with rice, fried onions, macaroni noodles, beans, and tomatoes.",
-
+  },
+  
+  {
   id: 52769,
   image: "",
   name: "",
   price: "$9.99",
   description: "Fries smothered with cheese and vegetables.",
-
+  },
+  
+  {
   id: 52802,
   image: "",
   name: "",
   price: "$7.50",
   description: "Fresh fish covered with mashed potatoes and our house made sauce.",
-
+  },
+  
+  {
   id: 52854,
   image: "",
   name: "",
   price: "$4.99",
   description: "Served with fresh berries and maple syrup.",
-
+  },
+  
+  {
   id: 52887,
   image: "",
   name: "",
   price: "$9.99",
   description: "Smoked fish served with rice.",
-
+  },
+  
+  {
   id: 52906,
   image: "",
   name: "",
   price: "$6.99",
   description: "Puff pastry tart made with leeks and cream.",
-
+  },
+  
+  {
   id: 52980,
   image: "",
   name: "",
   price: "$8.50",
   description: "Kale mashed potatoes, topped with smoky sausages.",
-
+  },
+  
+  {
   id: 53006,
   image: "",
   name: "",
   price: "$4.50",
   description: "Roasted potatoes, ground meat, peppers, and tomatoes.",
+  },
 
+
+  {
   id: 53028,
   image: "",
   name: "",
   price: "$8.99",
   description: "Filled with lamb, tomatoes, onions, tzatziki sauce.",
+  },
+  
 
+  {
   id: 52791,
   image: "",
   name: "",
   price: "$9.99",
   description: "Fresh strawberries and house-made cream.",
+  },
+  
 
+  {
   id: 52811,
   image: "",
   name: "",
   price: "$7.50",
   description: "Cannellini beans, tuscan kale, red pepper flakes, parmesan.",
+  },
 
-  id: 52871,
-  image: "",
-  name: "",
-  price: "$6.99",
-  description: "Udon noodles served with beef broth, beef, and assorted vegetables.",
+  {
+    id: 52871,
+    image: "",
+    name: "",
+    price: "$6.99",
+    description: "Udon noodles served with beef broth, beef, and assorted vegetables.",
+  },
 
-  id: 52926,
-  image: "",
-  name: "",
-  price: "$7.50",
-  description: "Flaky pastry dough filled with beef and sauce.",
+  {
+    id: 52926,
+    image: "",
+    name: "",
+    price: "$7.50",
+    description: "Flaky pastry dough filled with beef and sauce.",
+  }
+
   
-  
 
-}
+]
