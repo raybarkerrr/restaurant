@@ -57,33 +57,6 @@ function initMap() {
 
  // API Restaurant Data
  fetch("https://www.themealdb.com/api/json/v1/1/search.php?s")
-  .then((response) => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      throw new Error("NETWORK RESPONSE ERROR");
-    }
-  })
-  .then(data => {
-    console.log(data);
-    displayFood(data)
-  })
-  .catch((error) => console.error("FETCH ERROR:", error));
-
-
-
-  /* for (i = 0; i < data.meals.length; i++){
-    food = data.meals[i];
-    foodDiv = document.getElementById("food");
-    foodName = food.strMeal;
-    heading = document.createElement("h3");
-    heading.innerHTML = foodName;
-    foodDiv.appendChild(heading); 
-
-    foodImage = document.createElement("img");
-    foodImage.src = food.strMealThumb;
-    foodDiv.appendChild(foodImage);
-    document.body.style.backgroundImage = "url('" + food.strMealThumb + "')";
  .then((response) => {
    if (response.ok) {
      return response.json();
@@ -101,7 +74,11 @@ function initMap() {
    console.log(mealCheckout.length)
 
    let firstMeals = mealCheckout;
-   console.log(firstMeals.slice(-10))
+   console.log(firstMeals.slice(0, 10))
+
+   for (let i = 0; i < firstMeals.length; i++){
+    console.log(firstMeals[i])
+   }
 
    let lastMeals = mealCheckout;
    console.log(lastMeals.slice(15))
