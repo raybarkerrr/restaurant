@@ -65,8 +65,6 @@ function initMap() {
    }
  })
  .then(data => {
-   const button = document.getElementById('button-id');
-   button.addEventListener('click', function () {
     
    let mealCheckout = []
 
@@ -74,15 +72,20 @@ function initMap() {
    console.log(mealCheckout.length)
 
    let firstMeals = mealCheckout;
-   console.log(firstMeals.slice(0, 10))
 
-   for (let i = 0; i < firstMeals.length; i++){
+   for (let i = 0; i < firstMeals.slice(0,10).length; i++){
     console.log(firstMeals[i])
+    let menuItems = document.getElementById("menuItems");
+    let menuTitle = document.createElement("h1");
+
+    const menuContent = document.createTextNode("Yuumy");
+    menuItems.appendChild(menuContent);
+    
+
    }
 
    let lastMeals = mealCheckout;
    console.log(lastMeals.slice(15))
    
- });
  })
  .catch((error) => console.error("FETCH ERROR:", error));
