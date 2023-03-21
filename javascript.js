@@ -76,11 +76,14 @@ function initMap() {
    for (let i = 0; i < firstMeals.slice(0,10).length; i++){
     console.log(firstMeals[i])
     let menuItems = document.getElementById("menuItems");
+    let menuPricing = document.getElementById("menuPricing");
     let menuTitle = document.createElement("h1");
 
+    const menuPrice = document.createTextNode("$10");
+    menuPricing.appendChild(menuPrice);
     const menuContent = document.createTextNode("Yuumy");
     menuItems.appendChild(menuContent);
-    
+
 
    }
 
