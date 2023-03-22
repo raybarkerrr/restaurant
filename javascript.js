@@ -1,4 +1,3 @@
-
 // Hamburger Menu
 let mobileMenu = document.querySelector('.mobileMenu'); 
 let menuToggle = document.querySelector('.menuToggle');
@@ -6,6 +5,15 @@ let menuToggle = document.querySelector('.menuToggle');
 menuToggle.onclick = function() {
    mobileMenu.classList.toggle('open');
 }
+
+// Cart Menu
+let cartMenu = document.querySelector('.cartMenu'); 
+let cartToggle = document.querySelector('.cartToggle');
+
+cartToggle.onclick = function() {
+   cartMenu.classList.toggle('open');
+}
+
 
 // Google Maps 
 function initMap() { 
@@ -141,6 +149,18 @@ function initMap() {
     foodDescription.innerText = myDescriptions[data.meals[i].idMeal];
     foodDiv.appendChild(foodDescription);
 
+    let foodButton = document.createElement("button");
+    foodButton.innerText = "Add To Cart";
+    foodDiv.appendChild(foodButton);
 
+    let cartHolder = []
+    cartDiv = document.getElementById("cartDiv")
+    foodButton.onclick = function() {
+    cartHolder.push(foodName)
+    console.log(foodButton)
+    console.log(cartHolder)
+
+    }
   }
 }
+
