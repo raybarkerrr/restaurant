@@ -143,9 +143,9 @@ function initMap() {
     foodDiv.appendChild(foodImage);
     document.body.style.backgroundImage = "url('" + food.strMealThumb + "')";
 
-    let foodPrice = document.createElement("p");
-    let foo = foodPrice.innerText = myPrices[data.meals[i].idMeal];
-    foodDiv.appendChild(foodPrice);
+    let foodPriceDiv = document.createElement("p");
+    let foodPrice = foodPriceDiv.innerText = myPrices[data.meals[i].idMeal];
+    foodDiv.appendChild(foodPriceDiv);
 
     let foodDescription = document.createElement("p");
     foodDescription.innerText = myDescriptions[data.meals[i].idMeal];
@@ -164,7 +164,7 @@ function initMap() {
     cartDiv.appendChild(foodNameHolder); 
 
     let foodPriceHolder = document.createElement("p");
-    foodPriceHolder.innerText = foo;
+    foodPriceHolder.innerText = foodPrice;
     cartDiv.appendChild(foodPriceHolder); 
     console.log(foodPriceHolder)
 
