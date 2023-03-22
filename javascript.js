@@ -35,7 +35,7 @@ function initMap() {
  // Carousel
  let i = 0; 
  let images = [];
- var time = 3000;
+ let time = 3000;
 
  images [0] = "Photos/food3.jpeg"
  images [1] = "Photos/food4.jpeg"
@@ -132,7 +132,7 @@ function initMap() {
     foodDiv = document.getElementById("food");
     heading = document.createElement("h3");
     food = data.meals[i];
-    foodName = food.strMeal;
+    let foodName = food.strMeal;
     heading.innerHTML = foodName;
     foodDiv.appendChild(heading); 
 
@@ -153,9 +153,8 @@ function initMap() {
     foodButton.innerText = "Add To Cart";
     foodDiv.appendChild(foodButton);
 
-    let cartHolder = []
     
-    cartDiv = document.getElementById("cartDiv")
+    let cartDiv = document.getElementById("cartDiv")
     foodButton.onclick = function() {
     cartHolder.push(foodName)
     
@@ -170,3 +169,4 @@ function initMap() {
   }
 }
 
+let cartHolder = []
