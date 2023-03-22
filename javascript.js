@@ -129,9 +129,9 @@ function initMap() {
  function displayFood(data) {
 
   for (i = 0; i < data.meals.length; i++){
-    food = data.meals[i];
     foodDiv = document.getElementById("food");
     heading = document.createElement("h3");
+    food = data.meals[i];
     foodName = food.strMeal;
     heading.innerHTML = foodName;
     foodDiv.appendChild(heading); 
@@ -154,12 +154,13 @@ function initMap() {
     foodDiv.appendChild(foodButton);
 
     let cartHolder = []
+    
     cartDiv = document.getElementById("cartDiv")
     foodButton.onclick = function() {
     cartHolder.push(foodName)
     
     let foodHolder = document.createElement("p");
-    foodHolder.innerHTML = foodName;
+    foodHolder.innerText = foodName;
     cartDiv.appendChild(foodHolder); 
 
     console.log(foodButton)
