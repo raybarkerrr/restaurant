@@ -126,6 +126,8 @@ function initMap() {
     "52926": "$8.50",
   }
 
+  let cartHolder = []
+
  function displayFood(data) {
 
   for (i = 0; i < data.meals.length; i++){
@@ -142,7 +144,7 @@ function initMap() {
     document.body.style.backgroundImage = "url('" + food.strMealThumb + "')";
 
     let foodPrice = document.createElement("p");
-    foodPrice.innerText = myPrices[data.meals[i].idMeal];
+    let foo = foodPrice.innerText = myPrices[data.meals[i].idMeal];
     foodDiv.appendChild(foodPrice);
 
     let foodDescription = document.createElement("p");
@@ -153,20 +155,20 @@ function initMap() {
     foodButton.innerText = "Add To Cart";
     foodDiv.appendChild(foodButton);
 
-    
     let cartDiv = document.getElementById("cartDiv")
     foodButton.onclick = function() {
     cartHolder.push(foodName)
     
-    let foodHolder = document.createElement("p");
-    foodHolder.innerText = foodName;
-    cartDiv.appendChild(foodHolder); 
+    let foodNameHolder = document.createElement("p");
+    foodNameHolder.innerText = foodName;
+    cartDiv.appendChild(foodNameHolder); 
 
-    console.log(foodButton)
-    console.log(cartHolder)
+    let foodPriceHolder = document.createElement("p");
+    foodPriceHolder.innerText = foo;
+    cartDiv.appendChild(foodPriceHolder); 
+    console.log(foodPriceHolder)
 
     }
   }
 }
 
-let cartHolder = []
