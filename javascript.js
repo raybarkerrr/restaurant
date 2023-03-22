@@ -131,8 +131,8 @@ function initMap() {
   for (i = 0; i < data.meals.length; i++){
     food = data.meals[i];
     foodDiv = document.getElementById("food");
-    foodName = food.strMeal;
     heading = document.createElement("h3");
+    foodName = food.strMeal;
     heading.innerHTML = foodName;
     foodDiv.appendChild(heading); 
 
@@ -157,6 +157,11 @@ function initMap() {
     cartDiv = document.getElementById("cartDiv")
     foodButton.onclick = function() {
     cartHolder.push(foodName)
+    
+    let foodHolder = document.createElement("p");
+    foodHolder.innerHTML = foodName;
+    cartDiv.appendChild(foodHolder); 
+
     console.log(foodButton)
     console.log(cartHolder)
 
