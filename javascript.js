@@ -171,6 +171,13 @@ function initMap() {
     let foodButtonHolder = document.createElement("button");
     foodButtonHolder.innerText = "Remove";
     cartDiv.appendChild(foodButtonHolder);
+      
+    foodButtonHolder.onclick = function(){
+      foodPriceHolder.remove(foodButtonHolder)
+      foodNameHolder.remove(foodButtonHolder)
+      foodButtonHolder.remove(foodButtonHolder)
+
+    }
 
     }
   }
