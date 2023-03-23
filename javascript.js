@@ -168,6 +168,10 @@ function initMap() {
     cartDiv.appendChild(foodPriceHolder); 
     console.log(foodPriceHolder)
 
+    let foodButtonHolder = document.createElement("button");
+    foodButtonHolder.innerText = "Remove";
+    cartDiv.appendChild(foodButtonHolder);
+
     }
   }
 }
