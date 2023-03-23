@@ -164,18 +164,18 @@ function initMap() {
     cartDiv.appendChild(foodNameHolder); 
 
     let foodPriceHolder = document.createElement("p");
-    foodPriceHolder.innerText = foodPrice;
+    foodPriceHolder.innerText = parseFloat(foodPrice.replace("$", ""));
     cartDiv.appendChild(foodPriceHolder); 
-    console.log(foodPriceHolder)
+    console.log (foodPrice)
 
     let foodButtonHolder = document.createElement("button");
     foodButtonHolder.innerText = "Remove";
     cartDiv.appendChild(foodButtonHolder);
       
     foodButtonHolder.onclick = function(){
-      foodPriceHolder.remove(foodButtonHolder)
-      foodNameHolder.remove(foodButtonHolder)
-      foodButtonHolder.remove(foodButtonHolder)
+    foodPriceHolder.remove(foodButtonHolder)
+    foodNameHolder.remove(foodButtonHolder)
+    foodButtonHolder.remove(foodButtonHolder)
 
     }
 
