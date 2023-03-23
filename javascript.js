@@ -126,9 +126,11 @@ function initMap() {
     "52926": "$8.50",
   }
 
-  let cartHolder = []
 
  function displayFood(data) {
+
+  let cartHolder = []
+
 
   for (i = 0; i < data.meals.length; i++){
     foodDiv = document.getElementById("food");
