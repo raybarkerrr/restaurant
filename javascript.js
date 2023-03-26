@@ -133,6 +133,7 @@ function initMap() {
 
 
   for (i = 0; i < data.meals.length; i++){
+    
     foodDiv = document.getElementById("food");
     heading = document.createElement("h3");
     food = data.meals[i];
@@ -157,6 +158,8 @@ function initMap() {
     foodButton.innerText = "Add To Cart";
     foodDiv.appendChild(foodButton);
 
+    /* Within the Checkout Cart  */
+
     let cartDiv = document.getElementById("cartDiv")
     foodButton.onclick = function() {
     cartHolder.push(foodName)
@@ -166,9 +169,12 @@ function initMap() {
     cartDiv.appendChild(foodNameHolder); 
 
     let foodPriceHolder = document.createElement("p");
+    document.getElementById("cartTotal").innerText
     foodPriceHolder.innerText = parseFloat(foodPrice.replace("$", ""));
     cartDiv.appendChild(foodPriceHolder); 
     console.log (foodPrice)
+    let total = foodPrice + foodPrice
+    console.log(total)
 
     let foodButtonHolder = document.createElement("button");
     foodButtonHolder.innerText = "Remove";
