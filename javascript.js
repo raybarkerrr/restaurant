@@ -169,7 +169,7 @@ function initMap() {
     cartDiv.appendChild(foodNameHolder); 
 
     let foodPriceHolder = document.createElement("p");
-    document.getElementById("cartTotal").innerText
+    document.getElementById("cartTotal")
     foodPriceHolder.innerText = parseFloat(foodPrice.replace("$", ""));
     cartDiv.appendChild(foodPriceHolder); 
     console.log (foodPrice)
