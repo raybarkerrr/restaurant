@@ -168,13 +168,15 @@ function initMap() {
     foodNameHolder.innerText = foodName;
     cartDiv.appendChild(foodNameHolder); 
 
-    let foodPriceHolder = document.createElement("p");
-    document.getElementById("cartTotal")
-    foodPriceHolder.innerText = parseFloat(foodPrice.replace("$", ""));
-    cartDiv.appendChild(foodPriceHolder); 
-    console.log (foodPrice)
-    let total = foodPrice + foodPrice
-    console.log(total)
+    let foodPriceNumber = parseFloat(foodPrice.replace("$", ""));
+      let cartTotalHolder = document.getElementById("cartTotal");
+      let cartTotalTemp = parseFloat(
+        cartTotalHolder.innerText.replace("$", "")
+      );
+      let cartTotal = isNaN(cartTotalTemp) ? 0 : cartTotalTemp; //could be removed if you set initial content of cartTotal elem to 0
+      let total = cartTotal + foodPriceNumber;
+      console.log(total);
+      cartTotalHolder.innerText = total;
 
     let foodButtonHolder = document.createElement("button");
     foodButtonHolder.innerText = "Remove";
