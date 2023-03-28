@@ -183,7 +183,6 @@ function initMap() {
     cartDiv.appendChild(foodButtonHolder);
       
     foodButtonHolder.onclick = function(){
-    foodPriceHolder.remove(foodButtonHolder)
     foodNameHolder.remove(foodButtonHolder)
     foodButtonHolder.remove(foodButtonHolder)
 
