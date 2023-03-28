@@ -183,10 +183,15 @@ function initMap() {
     cartDiv.appendChild(foodButtonHolder);
       
     foodButtonHolder.onclick = function(){
-    foodNameHolder.remove(foodButtonHolder)
-    foodButtonHolder.remove(foodButtonHolder)
+      total = cartTotal - foodPriceNumber;
+      cartTotalHolder.innerText = total;
 
+      console.log(total)
+      foodNameHolder.remove(foodButtonHolder)
+    foodButtonHolder.remove(foodButtonHolder)
     }
+
+
 
     }
   }
