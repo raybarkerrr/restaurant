@@ -183,12 +183,12 @@ function initMap() {
     cartDiv.appendChild(foodButtonHolder);
       
     foodButtonHolder.onclick = function(){
-      total = cartTotal - foodPriceNumber;
+      total = total - foodPriceNumber;
       cartTotalHolder.innerText = total;
 
       console.log(total)
       foodNameHolder.remove(foodButtonHolder)
-    foodButtonHolder.remove(foodButtonHolder)
+      foodButtonHolder.remove(foodButtonHolder)
     }
 
 
