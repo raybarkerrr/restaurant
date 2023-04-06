@@ -185,7 +185,7 @@ function initMap() {
     foodButtonHolder.onclick = function(){
       let currentTotal = parseFloat(cartTotalHolder.innerText);
       total = currentTotal - foodPriceNumber;
-      cartTotalHolder.innerText = total;
+      cartTotalHolder.innerText = Math.ceil(total);
 
       console.log(total)
       foodNameHolder.remove(foodButtonHolder)
